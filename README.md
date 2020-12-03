@@ -24,12 +24,7 @@ def musicbajega(file, stopper):
 
 
     mixer.init()
-    
-    
     mixer.music.load(file)
-    
-    
-    
     mixer.music.play()
     
     
@@ -40,17 +35,28 @@ def musicbajega(file, stopper):
             break
 
 
+
+
+
 def log_content(msg):
+
+
     with open("tut.txt", "a") as l:
+    
         l.write(f"{msg} at {datetime.now()}   \n")
         print()
 
 
 water_time = time()
+
 eye_time = time()
+
 exercise_time = time()
+
 secs_OF_water = 45*60
+
 secs_OF_eye = 30*60
+
 secs_OF_exercise = 40*60
 
 
@@ -66,7 +72,9 @@ secs_OF_exercise = 40*60
 
 
 
+
 while True:
+
     if (time() - water_time) > secs_OF_water:
         print("water________________time      ")
         musicbajega("drinking.ogg", "drank")
